@@ -1,0 +1,221 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technical Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="topbar">
+      <a onclick="openNav()"
+        ><img
+          src="https://image.flaticon.com/icons/png/512/3388/3388823.png"
+          alt="Hamburger Menu"
+          id="hamburger"
+      /></a>
+      <div id="topbar-header">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+          alt="JavaScript Logo"
+        />
+        <h1>JS Documentation</h1>
+      </div>
+    </div>
+
+    <!-- Side navigation -->
+    <div class="sidenav" id="my-sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <header id="sidenav-header">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+          alt="JavaScript Logo"
+        />
+        <h1>JS Documentation</h1>
+      </header>
+      <a href="#about-js">About JS</a>
+      <a href="#variable-scope">Variable Scope</a>
+      <a href="#constants">Constants</a>
+      <a href="#data-types">Data Types</a>
+      <a href="#function-declarations">Function Declarations</a>
+      <a href="#reference">Reference</a>
+    </div>
+
+    <!-- Page content -->
+    <main id="main-doc">
+      <section class="main-section" id="about-js">
+        <header>
+          <h2>About JavaScript</h2>
+        </header>
+        <p>
+          JavaScript is a cross-platform, object-oriented scripting language. It
+          is a small and lightweight language. Inside a host environment (for
+          example, a web browser), JavaScript can be connected to the objects of
+          its environment to provide programmatic control over them.
+        </p>
+        <p>
+          JavaScript contains a standard library of objects, such as Array,
+          Date, and Math, and a core set of language elements such as operators,
+          control structures, and statements. Core JavaScript can be extended
+          for a variety of purposes by supplementing it with additional objects;
+          for example:
+        </p>
+        <p>
+          Client-side JavaScript extends the core language by supplying objects
+          to control a browser and its Document Object Model (DOM). For example,
+          client-side extensions allow an application to place elements on an
+          HTML form and respond to user events such as mouse clicks, form input,
+          and page navigation. Server-side JavaScript extends the core language
+          by supplying objects relevant to running JavaScript on a server. For
+          example, server-side extensions allow an application to communicate
+          with a database, provide continuity of information from one invocation
+          to another of the application, or perform file manipulations on a
+          server.
+        </p>
+      </section>
+      <section class="main-section" id="variable-scope">
+        <header>
+          <h2 id="variable-scope">Variable Scope</h2>
+        </header>
+        <p>
+          When you declare a variable outside of any function, it is called a
+          global variable, because it is available to any other code in the
+          current document. When you declare a variable within a function, it is
+          called a local variable, because it is available only within that
+          function. JavaScript before ECMAScript 2015 does not have block
+          statement scope; rather, a variable declared within a block is local
+          to the function (or global scope) that the block resides within. For
+          example the following code will log 5, because the scope of x is the
+          function (or global context) within which x is declared, not the
+          block, which in this case is an if statement.
+        </p>
+        <code> if (true) { var x = 5; } console.log(x); // 5 </code>
+        <p>
+          This behavior changes, when using the let declaration introduced in
+          ECMAScript 2015.
+        </p>
+        <code>
+          if (true) { let y = 5; } console.log(y); // ReferenceError: y is not
+          defined
+        </code>
+      </section>
+      <section class="main-section" id="constants">
+        <header>
+          <h2>Constants</h2>
+        </header>
+        <p>
+          You can create a read-only, named constant with the const keyword. The
+          syntax of a constant identifier is the same as for a variable
+          identifier: it must start with a letter, underscore or dollar sign and
+          can contain alphabetic, numeric, or underscore characters.
+        </p>
+        <code> const PI = 3.14; </code>
+        <p>
+          A constant cannot change value through assignment or be re-declared
+          while the script is running. It has to be initialized to a value.
+        </p>
+        <p>
+          The scope rules for constants are the same as those for let block
+          scope variables. If the const keyword is omitted, the identifier is
+          assumed to represent a variable.
+        </p>
+        <p>
+          You cannot declare a constant with the same name as a function or
+          variable in the same scope. For example:
+        </p>
+        <code>
+          // THIS WILL CAUSE AN ERROR function f() {};<br />const f = 5; // THIS
+          WILL CAUSE AN ERROR ALSO <br />function f() { const g = 5; var g;
+          //statements }
+        </code>
+      </section>
+      <section class="main-section" id="data-types">
+        <header>
+          <h2>Data Types</h2>
+        </header>
+        <p>The latest ECMAScript standard defines seven data types:</p>
+        <ul>
+          <li>Six data types that are primitives:</li>
+          <ul>
+            <li>Boolean. true and false.</li>
+            <li>
+              null. A special keyword denoting a null value. Because JavaScript
+              is case-sensitive, null is not the same as Null, NULL, or any
+              other variant.
+            </li>
+            <li>undefined. A top-level property whose value is undefined.</li>
+            <li>Number. 42 or 3.14159.</li>
+            <li>String. "Howdy"</li>
+            <li>
+              Symbol (new in ECMAScript 2015). A data type whose instances are
+              unique and immutable.
+            </li>
+          </ul>
+          <li>and Object</li>
+        </ul>
+        <p>
+          Although these data types are a relatively small amount, they enable
+          you to perform useful functions with your applications. Objects and
+          functions are the other fundamental elements in the language. You can
+          think of objects as named containers for values, and functions as
+          procedures that your application can perform.
+        </p>
+      </section>
+      <section class="main-section" id="function-declaration">
+        <header>
+          <h2>Function Declarations</h2>
+        </header>
+        <p>
+          A function definition (also called a function declaration, or function
+          statement) consists of the function keyword, followed by:
+        </p>
+        <ul>
+          <li>The name of the function.</li>
+          <li>
+            A list of arguments to the function, enclosed in parentheses and
+            separated by commas.
+          </li>
+          <li>
+            The JavaScript statements that define the function, enclosed in
+            curly brackets, { }.
+          </li>
+        </ul>
+        <p>
+          For example, the following code defines a simple function named
+          square:
+        </p>
+        <code> function square(number) { return number * number; } </code>
+        <p>
+          The function square takes one argument, called number. The function
+          consists of one statement that says to return the argument of the
+          function (that is, number) multiplied by itself. The return statement
+          specifies the value returned by the function.
+        </p>
+        <code> return number * number; </code>
+        <p>
+          Primitive parameters (such as a number) are passed to functions by
+          value; the value is passed to the function, but if the function
+          changes the value of the parameter, this change is not reflected
+          globally or in the calling function.
+        </p>
+      </section>
+      <section class="main-section" id="reference">
+        <header>
+          <h2>Reference</h2>
+        </header>
+        <p>
+          All the documentation in this page is taken from
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+            >MDN</a
+          >
+        </p>
+      </section>
+    </main>
+    <a href="../index.html"><div id="back-button"><img src="https://image.flaticon.com/icons/png/512/709/709624.png" alt="Back Button Icon" id="back-button-icon"></div></a>
+  </body>
+</html>

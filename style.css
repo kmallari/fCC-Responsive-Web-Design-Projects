@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: Rubik, Helvetica;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(22, 23, 24);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 99;
+}
+
+#navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar li {
+  float: left;
+}
+
+#navbar li a {
+  display: block;
+  color: rgb(125, 133, 136);
+  text-align: center;
+  padding: 1.5em;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+  text-decoration: none;
+}
+
+#navbar li a:hover {
+  background: linear-gradient(0deg, rgba(0, 255, 255, 0.103), rgb(22, 23, 24));
+  border-bottom: 1px solid aqua;
+  color: white;
+}
+
+#navbar h2 {
+  margin-left: 2em;
+  color: white;
+  animation: blue-shifting 10s infinite ease-in-out;
+}
+
+@keyframes blue-shifting {
+  0% {
+    color: rgb(47, 97, 206);
+  }
+  25% {
+    color: rgb(47, 165, 233);
+  }
+  50% {
+    color: rgb(23, 121, 151);
+  }
+  75% {
+    color: rgb(79, 218, 223);
+  }
+  100% {
+    color: rgb(80, 64, 224);
+  }
+}
+
+#welcome-section {
+  background-color: rgb(12, 14, 14);
+  height: 100vh;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome-section::before {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAUVBMVEWFhYWDg4N3d3dtbW17e3t1dXWBgYGHh4d5eXlzc3OLi4ubm5uVlZWPj4+NjY19fX2JiYl/f39ra2uRkZGZmZlpaWmXl5dvb29xcXGTk5NnZ2c8TV1mAAAAG3RSTlNAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAvEOwtAAAFVklEQVR4XpWWB67c2BUFb3g557T/hRo9/WUMZHlgr4Bg8Z4qQgQJlHI4A8SzFVrapvmTF9O7dmYRFZ60YiBhJRCgh1FYhiLAmdvX0CzTOpNE77ME0Zty/nWWzchDtiqrmQDeuv3powQ5ta2eN0FY0InkqDD73lT9c9lEzwUNqgFHs9VQce3TVClFCQrSTfOiYkVJQBmpbq2L6iZavPnAPcoU0dSw0SUTqz/GtrGuXfbyyBniKykOWQWGqwwMA7QiYAxi+IlPdqo+hYHnUt5ZPfnsHJyNiDtnpJyayNBkF6cWoYGAMY92U2hXHF/C1M8uP/ZtYdiuj26UdAdQQSXQErwSOMzt/XWRWAz5GuSBIkwG1H3FabJ2OsUOUhGC6tK4EMtJO0ttC6IBD3kM0ve0tJwMdSfjZo+EEISaeTr9P3wYrGjXqyC1krcKdhMpxEnt5JetoulscpyzhXN5FRpuPHvbeQaKxFAEB6EN+cYN6xD7RYGpXpNndMmZgM5Dcs3YSNFDHUo2LGfZuukSWyUYirJAdYbF3MfqEKmjM+I2EfhA94iG3L7uKrR+GdWD73ydlIB+6hgref1QTlmgmbM3/LeX5GI1Ux1RWpgxpLuZ2+I+IjzZ8wqE4nilvQdkUdfhzI5QDWy+kw5Wgg2pGpeEVeCCA7b85BO3F9DzxB3cdqvBzWcmzbyMiqhzuYqtHRVG2y4x+KOlnyqla8AoWWpuBoYRxzXrfKuILl6SfiWCbjxoZJUaCBj1CjH7GIaDbc9kqBY3W/Rgjda1iqQcOJu2WW+76pZC9QG7M00dffe9hNnseupFL53r8F7YHSwJWUKP2q+k7RdsxyOB11n0xtOvnW4irMMFNV4H0uqwS5ExsmP9AxbDTc9JwgneAT5vTiUSm1E7BSflSt3bfa1tv8Di3R8n3Af7MNWzs49hmauE2wP+ttrq+AsWpFG2awvsuOqbipWHgtuvuaAE+A1Z/7gC9hesnr+7wqCwG8c5yAg3AL1fm8T9AZtp/bbJGwl1pNrE7RuOX7PeMRUERVaPpEs+yqeoSmuOlokqw49pgomjLeh7icHNlG19yjs6XXOMedYm5xH2YxpV2tc0Ro2jJfxC50ApuxGob7lMsxfTbeUv07TyYxpeLucEH1gNd4IKH2LAg5TdVhlCafZvpskfncCfx8pOhJzd76bJWeYFnFciwcYfubRc12Ip/ppIhA1/mSZ/RxjFDrJC5xifFjJpY2Xl5zXdguFqYyTR1zSp1Y9p+tktDYYSNflcxI0iyO4TPBdlRcpeqjK/piF5bklq77VSEaA+z8qmJTFzIWiitbnzR794USKBUaT0NTEsVjZqLaFVqJoPN9ODG70IPbfBHKK+/q/AWR0tJzYHRULOa4MP+W/HfGadZUbfw177G7j/OGbIs8TahLyynl4X4RinF793Oz+BU0saXtUHrVBFT/DnA3ctNPoGbs4hRIjTok8i+algT1lTHi4SxFvONKNrgQFAq2/gFnWMXgwffgYMJpiKYkmW3tTg3ZQ9Jq+f8XN+A5eeUKHWvJWJ2sgJ1Sop+wwhqFVijqWaJhwtD8MNlSBeWNNWTa5Z5kPZw5+LbVT99wqTdx29lMUH4OIG/D86ruKEauBjvH5xy6um/Sfj7ei6UUVk4AIl3MyD4MSSTOFgSwsH/QJWaQ5as7ZcmgBZkzjjU1UrQ74ci1gWBCSGHtuV1H2mhSnO3Wp/3fEV5a+4wz//6qy8JxjZsmxxy5+4w9CDNJY09T072iKG0EnOS0arEYgXqYnXcYHwjTtUNAcMelOd4xpkoqiTYICWFq0JSiPfPDQdnt+4/wuqcXY47QILbgAAAABJRU5ErkJggg==);
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  /* background-image: url('https://assets.digitalocean.com/labs/images/community_bg.png'); */
+  /* background-repeat: no-repeat; */
+  background-position: 50% 0;
+  /* background-size: cover; */
+  opacity: 0.6;
+}
+
+#welcome-section h1 {
+  margin-bottom: 0em;
+  font-size: 8em;
+  animation: blue-shifting 10s infinite ease-in-out;
+  z-index: 3;
+}
+
+#welcome-section h3 {
+  color: rgb(100, 105, 109);
+  font-size: 2em;
+  font-weight: 300;
+  z-index: 2;
+}
+
+.blur-ball {
+  position: absolute;
+  top: -600px;
+  background-color: white;
+  height: 600px;
+  width: 600px;
+  box-shadow: rgb(65, 162, 218) 0px 0px 150px 180px;
+  border-radius: 50%;
+  backdrop-filter: blur(50px);
+  z-index: 1;
+  opacity: 20%;
+  animation: blue-shifting 4s infinite ease-in-out;
+}
+
+#projects {
+  margin: auto;
+  height: auto;
+  width: 1180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.tiles-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.tile-img {
+  box-shadow: rgba(0, 0, 0, 0.1) 10px 10px 10px 0;
+  border-radius: 30px;
+}
+
+.project-tile {
+  margin-left: 0.93em;
+  margin-right: 0.93em;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 10px 10px 60px 0px;
+  width: 560px;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1.5em;
+  transform: scale(0.85);
+  transition: transform 0.2s;
+  border-radius: 30px;
+}
+
+.project-tile:hover {
+  transform: scale(0.9);
+  color: rgb(27, 118, 221);
+}
+
+#projects a {
+  text-decoration: none;
+  animation: blue-shifting 7s infinite ease-in-out;
+}
+
+.tiles-container h3 {
+  font-size: 1.5em;
+}
+
+#projects h2 {
+  font-size: 2em;
+  cursor: default;
+  transition: transform 0.2s, text-decoration 0.2s;
+}
+
+#projects h2:hover {
+  transform: scale(1.1);
+  text-decoration: underline;
+}
+
+#profile-section {
+  background-color: rgb(12, 14, 14);
+  height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#profile-info {
+  width: 1180px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#contact-header {
+  display: block;
+}
+
+#contact-header p {
+  opacity: 40%;
+}
+
+#contact-header h2 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+.contact {
+  background-color: white;
+  color: rgb(22, 23, 24);
+  margin: 1em;
+  width: 200px;
+  border-radius: 1000px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  transition: background-color 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.contact:hover {
+  background-color: rgb(37, 38, 41);
+  color: white;
+  transform: translateY(-0.5em);
+  box-shadow: #ffffff15 0px 0px 20px 0px;
+}
+
+#contact-info a {
+  text-decoration: none;
+}
+
+.contact-img {
+  filter: invert(0%) sepia(30%) saturate(0%) hue-rotate(90deg) brightness(10%)
+    contrast(10%);
+  height: 1.4em;
+  margin-right: 1em;
+}
+
+#discord {
+  cursor: pointer;
+}
+
+#discord-tag {
+  visibility: hidden;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 250px;
+  background-color: rgb(52, 56, 58);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  /* left: 50%; */
+  /* margin-left: -80px; */
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgb(52, 56, 58) transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1180px) and (max-height: 900px) {
+    #navbar h2 {
+        display: none;
+        /* visibility: hidden; */
+      }
+
+    #navbar li a {
+        font-size: 0.95em;
+    }
+
+    #welcome-section h1 {
+        font-size: 4.4em;
+        animation: blue-shifting 10s infinite ease-in-out;
+        z-index: 3;
+        text-align: center;
+    }
+
+    #welcome-section h3 {
+        color: rgb(100, 105, 109);
+        font-size: 1.4em;
+        font-weight: 300;
+        z-index: 2;
+      }
+
+    nav {
+        justify-content: center;
+    }
+
+    #projects {
+        width: auto;
+        height: auto;
+    }
+
+    .tiles-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .project-tile {
+        margin: 0;
+        width: 400px;
+        height: 280px;
+    }
+
+    .tile-img {
+        width: 380px;
+    }
+
+    #profile-info {
+        width: auto;
+        flex-direction: column;
+    }
+
+    #contact-header p {
+        opacity: 40%;
+        text-align: center;
+        margin: 2em;
+        font-size: 1.4em;
+      }
+      
+    #contact-header h2 {
+        font-size: 3em;
+        margin: auto;
+        text-align: center;
+    }
+
+}

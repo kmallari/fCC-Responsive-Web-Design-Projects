@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  font-family: Poppins, Helvetica;
+  padding: 0px;
+  margin: 0px;
+}
+
+main {
+  display: block;
+  width: 100%;
+}
+
+#left {
+  width: 50%;
+  position: absolute;
+  left: 0px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#image {
+  background: url("https://images.pexels.com/photos/1436141/pexels-photo-1436141.jpeg");
+  background-size: 100%;
+  position: absolute;
+  width: 50%;
+  right: 0px;
+  height: 100%;
+}
+
+#image::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(21, 208, 255, 0.534),
+    rgba(142, 48, 219, 0.541)
+  );
+}
+
+p {
+  margin-top: -1em;
+  margin-bottom: 2em;
+  opacity: 50%;
+}
+
+#form {
+  padding: 4em;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  box-shadow: rgba(0, 0, 0, 0.062) 10px 10px 50px;
+  border-radius: 50px;
+  justify-content: center;
+}
+
+#textbox {
+  height: 5em;
+  width: 15em;
+}
+
+form {
+  line-height: 2.5em;
+  height: auto;
+}
+
+input {
+  font-family: Poppins, Helvetica;
+}
+
+.text-input {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  border: 1px solid #b6c0c5;
+  color: #337ed4;
+  width: 250px;
+  height: 30px;
+  padding-left: 10px;
+}
+
+.choices {
+  display: flex;
+  flex-direction: row;
+
+  flex-wrap: wrap;
+}
+
+.real-label {
+  font-weight: 500;
+}
+
+label {
+  margin-right: 1em;
+}
+
+.text-input:focus {
+  outline: none;
+  border: 1px solid #667de0;
+  color: #737b80;
+}
+
+#number {
+  padding-right: 1em;
+}
+
+#dropdown {
+  padding-right: 1em;
+}
+
+#textbox:focus {
+  color: rgba(79, 85, 87, 0.534);
+}
+
+::placeholder {
+  color: rgb(182, 182, 182);
+}
+
+option,
+select {
+  font-family: Poppins, Helvetica;
+}
+
+#textarea {
+  font-family: Poppins, Helvetica;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  border: 1px solid #b6c0c5;
+  color: #337ed4;
+  padding-left: 10px;
+}
+
+#textarea:focus {
+  outline: none;
+  color: rgba(79, 85, 87, 0.534);
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+@media screen and (max-width: 1150px) and (max-height: 600px) {
+  #image {
+    display: none;
+  }
+
+  main {
+    display: inline;
+  }
+
+  #left {
+    width: 100%;
+    margin: auto;
+    top: 10em;
+    left: 0px;
+    position: absolute;
+  }
+}
+
+input[type="radio"]:after {
+  width: 12px;
+  height: 12px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #e6e6e6;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid rgb(190, 190, 190);
+}
+
+input[type="radio"]:checked:after {
+  width: 12px;
+  height: 12px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #53a4f0;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid rgb(228, 228, 228);
+}
+
+input[type="checkbox"]:after {
+  width: 12px;
+  height: 12px;
+
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #e6e6e6;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid rgb(190, 190, 190);
+}
+
+input[type="checkbox"]:checked:after {
+  width: 12px;
+  height: 12px;
+
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #53a4f0;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid rgb(228, 228, 228);
+}
+
+button {
+  margin-top: 1.5em;
+  outline: none;
+  font-family: Poppins, Helvetica;
+  width: 9em;
+  height: 3em;
+  border-radius: 10em;
+  border: none;
+}
+
+button:hover {
+  animation-name: change-color;
+  animation-duration: 0.1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+}
+
+@keyframes change-color {
+  100% {
+    background-color: #53a4f0;
+    color: white;
+  }
+}
+
+#back-button {
+    overflow: hidden;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.1) 20px 20px 20px 0;
+}
+
+#back-button:hover {
+    background-color: rgb(228, 94, 32);
+    filter: invert(100);
+}
+
+#back-button-icon {
+    transform: scale(0.1);
+}

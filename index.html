@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <section id="welcome-section">
+      <div class="blur-ball"></div>
+      <h1>Hi, I'm Kevin!</h1>
+      <h3>An aspiring web developer.</h3>
+    </section>
+    <section id="projects">
+      <div>
+        <h2>My Projects</h2>
+      </div>
+      <div class="tiles-container">
+        <a href="4 - Technical Documentation Page\index.html"
+          ><div class="project-tile">
+            <img
+              src="https://i.postimg.cc/bJwb7C5D/1.png"
+              alt="JS Documentation"
+              class="tile-img"
+            />
+            <h3>JavaScript Documentation</h3>
+          </div></a
+        >
+        <a href="3 - Product Landing Page\index.html"
+          ><div class="project-tile">
+            <img
+              src="https://i.postimg.cc/BvgHw9mf/2.png"
+              alt="Shure Mic Landing Page"
+              class="tile-img"
+            />
+            <h3>Shure Mic Landing Page</h3>
+          </div></a
+        >
+        <a href="2 - Survey Form\index.html"
+          ><div class="project-tile">
+            <img
+              src="https://i.postimg.cc/0QXmPGgt/3.png"
+              alt="Music Taste Survey"
+              class="tile-img"
+            />
+            <h3>Music Taste Survey</h3>
+          </div></a
+        >
+        <a href="1 - Tribute Page\index.html"
+          ><div class="project-tile">
+            <img
+              src="https://i.postimg.cc/vT1nB1bG/4.png"
+              alt="Borlaug Tribute Page"
+              class="tile-img"
+            />
+            <h3>Norman Borlaug Tribute Page</h3>
+          </div></a
+        >
+      </div>
+    </section>
+    <section id="profile-section">
+      <div id="profile-info">
+        <div id="contact-header">
+          <h2>Let's work together.</h2>
+          <p>Want to get connected and work on a project together?</p>
+          <p>You can view my GitHub or contact me through Discord.</p>
+        </div>
+        <div id="contact-info">
+          <p id="discord-tag">Recognized#0001</p>
+          <div
+            class="contact popup"
+            id="discord"
+            onclick="copyToClipboard('#discord-tag'), popUp()"
+          >
+            <img
+              src="https://discord.com/assets/f9bb9c4af2b9c32a2c5ee0014661546d.png"
+              alt=""
+              class="contact-img"
+            />
+            <h4>Discord</h4>
+            <span class="popuptext" id="myPopup"
+              >Copied <strong>Recognized#0001</strong> to clipboard!</span
+            >
+          </div>
+          <a href="https://github.com/kmallari/"
+            ><div class="contact" id="github">
+              <img
+                src="https://image.flaticon.com/icons/png/512/25/25231.png"
+                alt="GitHub Logo"
+                class="contact-img"
+              />
+              <h4>GitHub</h4>
+            </div></a
+          >
+        </div>
+      </div>
+    </section>
+    <nav id="navbar">
+      <h2>KEVIN MALLARI</h2>
+      <ul>
+        <li><a href="#welcome-section" class="nav-hover">About</a></li>
+        <li><a href="#projects" class="nav-hover">Projects</a></li>
+        <li><a href="#profile-section" class="nav-hover">Contact</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>

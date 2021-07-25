@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Titillium+Web:wght@200;300;400;600;700;900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background: linear-gradient(-45deg, rgb(18, 18, 19), rgb(51, 51, 53));
+    color: white;
+    font-family: "Noto Sans", Helvetica;
+    margin-top: 2em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 6em;
+}
+
+em {
+    color: #B4E25E;
+}
+
+#real-top {
+    font-size: 8px;
+}
+
+#main-header {
+    display: flex;
+    align-items: center;
+}
+
+#navbar-links {
+    display: flex;
+}
+
+#pricing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#boxes {
+    display: flex;
+    flex-direction: row;
+}
+
+#header-text {
+    padding-right: 5em;
+}
+
+#header-img {
+    filter: invert(99%) sepia(30%) saturate(2490%) hue-rotate(21deg) brightness(96%) contrast(84%);
+    height: 2em;
+    width: auto;
+    padding: 0;
+    margin-left: 2em;
+}
+
+header {
+    position: fixed;
+    float: left;
+    top: 0;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgb(28, 28, 29), rgb(23, 23, 24))
+}
+
+#upper-light {
+    content: "";
+}
+
+p {
+    opacity: 25%;
+    font-size: 0.9em;
+    line-height: 2.5em;
+}
+
+#main-header h1 {
+    font-weight: 900;
+    font-size: 2.5em;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+ul {
+    height: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+header nav li {
+    list-style: none;
+    font-weight: 400;
+}
+
+header nav li a {
+    padding: 0 3em;
+    float: left;
+    display: flex;
+    align-items: center;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    height: 100%;
+    
+}
+
+header nav li a:hover {
+    animation: nav-hover 0.2s ease-out forwards;
+}
+
+@keyframes nav-hover {
+    100% { background-color: rgba(255, 255, 255, 0.096); }
+}
+
+#mic-img::before {
+    content: "";
+    box-shadow: black 10px 10px 10px 10px;
+}
+
+#review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5em;
+    background-color: rgba(16, 16, 17, 0.425);
+    width: 100%;
+    margin-top: 4em;
+}
+
+#review p {
+    margin-bottom: 3em;
+}
+
+#review h2 {
+    margin-bottom: 0;
+}
+
+#pricing-section-title {
+    margin-top: 4em;
+}
+
+.pricing-box {
+    background: linear-gradient(0deg, rgb(24, 25, 26), rgb(37, 39, 39));
+    margin: 1em;
+    padding: 3em;
+    box-shadow: rgb(21, 22, 22) 10px 10px 20px;
+    padding-bottom: 4em;
+}
+
+.pricing-price{
+    background-color: #B4E25E;
+    padding: 0.5em;
+    font-size: 0.85em;
+    color:rgb(59, 59, 63);
+    width: 4em;
+    border-radius: 3em;
+    text-align: center;
+}
+
+.pricing-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: -1em;
+}
+
+.pricing-title {
+    font-size: 2em;
+    margin-right: 0.5em;
+}
+
+.buy-now-btn {
+    padding: 1em 2em;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    background-color: #b4e25e00;
+    border: 1px solid #B4E25E;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.buy-now-btn:hover {
+    background-color: #B4E25E;
+    color: rgb(48, 51, 53);
+}
+
+#form-section {
+    color: black;
+    background-color: white;
+}
+
+#actual-form {
+    width: 1180px;
+    margin: auto;
+    padding: 6em 0;
+    text-align: center;
+}
+
+#actual-form p {
+    margin-top: -1em;
+}
+
+.email-input {
+    font-family: "Titillium Web";
+    color: rgb(69, 71, 73);
+}
+
+.send-btn {
+    color:rgb(28, 28, 29);
+    background-color: #B4E25E;
+    border: none;
+    margin-left: 2em;
+}
+
+.email-input:hover {
+    background-color: white;
+}
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
+#back-button {
+    overflow: hidden;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.1) 20px 20px 20px 0;
+}
+
+#back-button:hover {
+    background-color: rgb(228, 94, 32);
+    filter: invert(100);
+}
+
+#back-button-icon {
+    transform: scale(0.1);
+}

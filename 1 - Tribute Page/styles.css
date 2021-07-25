@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+:root {
+    --off-white: #dfdfdf;
+    --white: #ffffff;
+    --bl: #1b1b1b;
+    --dark-gray: #525252;
+}
+
+body {
+    font-family: "Source Sans Pro", Helvetica;
+    background: linear-gradient(var(--off-white),var(--white));
+    padding-bottom: 1em;
+}
+
+#main {
+    max-width: 1180px;
+    width: auto;
+    height: auto;
+    margin: auto;
+}
+
+#title {
+    padding-top: 2em;
+    padding-bottom: -1em;
+    text-align: center;
+    font-size: 3em;
+}
+
+#img-div{
+    max-width: 100%;
+    height: auto;
+}
+
+#image {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 5px 5px 20px 0px rgb(0 0 0 / 0.2);
+}
+
+#img-caption {
+    margin-top: 2em;
+    opacity: 0.5;
+}
+
+#life-info {
+    width: 70%;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    background-color: var(--white);
+    padding: 2em;
+}
+
+#tribute-info {
+    text-align: center;
+    
+}
+
+#wiki {
+    text-align: center;
+    margin-top: 2em;
+}
+
+ul {
+    line-height: 2em;
+}
+
+li {
+    color: var(--dark-gray);
+}
+
+strong {
+    color: var(--bl);
+}
+
+h4 {
+    position: relative;
+    bottom: 1em;
+    font-weight: 400;
+    text-align: center;
+}
+
+a {
+    color:rgb(13, 95, 163);
+    transition: color 0.1s linear; /* vendorless fallback */
+    text-decoration: none;
+    font-weight: 800;
+}
+
+a:hover {
+    color:rgb(84, 176, 252);
+    cursor: pointer;
+}
+
+h3 {
+    font-weight: 600;
+}
+
+#back-button {
+    overflow: hidden;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.1) 20px 20px 20px 0;
+}
+
+#back-button:hover {
+    background-color: rgb(228, 94, 32);
+    filter: invert(100);
+}
+
+#back-button-icon {
+    transform: scale(0.1);
+}

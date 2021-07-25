@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@300;400;700&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: "IBM Plex Sans";
+  background-color: #f0f0f0;
+}
+
+.topbar {
+  display: none;
+}
+
+.main-section p,
+li {
+  line-height: 2em;
+  margin-left: 2em;
+}
+
+.main-section code {
+  display: block;
+  font-family: "IBM Plex Mono";
+  background-color: rgb(217, 221, 224);
+  padding: 1em;
+  margin-left: 6em;
+  border: 1px solid rgb(198, 205, 207);
+  color: rgb(75, 100, 133);
+  font-size: 0.75em;
+  width: 40em;
+}
+
+/* The sidebar menu */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 24em; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: rgb(31, 31, 34);
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 2em;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 1em;
+  text-decoration: none;
+  font-size: 1em;
+  color: #818181;
+  display: block;
+  padding-left: 4em;
+  line-height: 2em;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+  background-color: rgb(39, 42, 44);
+}
+
+.sidenav h1 {
+  color: white;
+}
+
+.sidenav h1:hover {
+  animation: to-yellow 0.2s ease-in forwards;
+}
+
+@keyframes to-yellow {
+  100% {
+    color: yellow;
+  }
+}
+
+.sidenav img {
+  width: 2.5em;
+  height: 2.5em;
+}
+
+#sidenav-header {
+  display: column;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  padding-left: 4em;
+  padding-top: 3em;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+#main-doc {
+  margin-top: 6em;
+  margin-left: 30em;
+  padding-right: 24em;
+  padding-bottom: 6em;
+}
+
+p a {
+  text-decoration: none;
+  color: rgb(209, 143, 19);
+}
+
+p a:hover {
+  animation: underline 0s ease-in forwards;
+}
+
+@keyframes underline {
+  100% {
+    color: rgb(243, 107, 29);
+    text-decoration: underline;
+  }
+}
+
+.closebtn {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 1200px) {
+  .sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+  }
+
+  #main-doc {
+    margin: auto;
+    padding: 3em;
+  }
+
+  .topbar {
+    display: flex;
+    align-items: center;
+    background-color: rgb(31, 31, 34);
+    height: 4em;
+    width: 100%;
+    align-items: center;
+  }
+
+  #hamburger {
+    width: 3em;
+    height: 3em;
+    filter: invert(99%) sepia(40%) saturate(2490%) hue-rotate(350deg)
+      brightness(96%) contrast(84%);
+    margin-left: 1em;
+    cursor: pointer;
+    /* border: 1px solid white ; */
+  }
+
+  #topbar-header {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    color: white;
+  }
+
+  .topbar h1 {
+    margin-left: 0.5em;
+  }
+
+  .topbar img {
+    width: 2.5em;
+    height: 2.5em;
+  }
+
+  .closebtn {
+    visibility: visible;
+    text-align: right;
+    margin-top: 0;
+  }
+
+  .closebtn:hover {
+    background-color: rgba(255, 0, 0, 0.24);
+  }
+}
+
+#back-button {
+    overflow: hidden;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.1) 20px 20px 20px 0;
+}
+
+#back-button:hover {
+    background-color: rgb(228, 94, 32);
+    filter: invert(100);
+}
+
+#back-button-icon {
+    transform: scale(0.1);
+}
